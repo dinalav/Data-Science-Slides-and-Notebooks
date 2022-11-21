@@ -1,0 +1,48 @@
+Creating a virtual environment with Anaconda and adding it to Jupyter
+
+    virtualenv (recomended for installing econml packages) Virtual environments help to avoid possible conflicts between different packages. For example Econml uses numpy 1.20 or below, while you might have already a later version. 
+        https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+        https://janakiev.com/blog/jupyter-virtual-envs/ This article gives good instructions how to create a virtual environment with Anaconda and how to add it in your Jupyter notebook
+
+    econml package
+        https://pypi.org/project/econml/
+
+Steps 
+    1. Open Anaconda prompt
+
+    2. conda create -n myenv 
+	where myenv is any name you want to set for your new virtual environment (e.g. conda create -n econml)
+	a new environment is stored in the envs folder in your Anaconda directory.
+
+    3. To start working in it: conda activate myenv
+
+    4. After activating the virtual environment, you need to add its Kernel to Jupyter. 
+	Install ipykernel which provides the IPython kernel for Jupyter: pip install --user ipykernel
+    	Add the environment to Jupyter: python -m ipykernel install --user --name=myenv
+    		You should see the following output "Installed kernelspec myenv in /home/user/.local/share/jupyter/kernels/myenv" 
+		!!If such message does not appear, check in Anaconda Navigator whether Jupyter notebook is installed in this new virtual environment. If it is not the case, press 'Install' in Navigator or type 'conda install -c conda-forge notebook' in Prompt
+    		Now you are able to choose this new environment as a kernel in Jupyter
+        	In an open notebook: Kernel --> Change Kernel --> myenv
+    5. Again from Anaconda prompt (make sure you are in the newly created virtual environment): pip install econml
+    6. Open a new Jupyter notebook. Select the necessary Kernel (Kernel --> Change Kernel --> myenv). 
+       Test if you have all the necessary packages installed. If some packages are missing in your new virtual environment: pip install package_name
+
+# Packages to import 
+from econml.dml import ForestDML
+from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import train_test_split
+
+import statsmodels.api as sm
+
+      7. More actions in Anaconda Prompt:  
+	    to stop this virtual enviroment in Anaconda Prompt: conda deactivate 
+    	    to list all available environments: conda env list
+    	    to remove an environment: conda env remove -n myenv
+		once you remove the virtual environment, you can remove the kernel from Jupyter: jupyter kernelspec uninstall myenv
+    

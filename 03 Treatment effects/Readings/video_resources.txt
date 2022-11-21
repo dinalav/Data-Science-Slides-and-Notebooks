@@ -1,0 +1,16 @@
+Video Resources: 
+
+Susan Athey and Stefan Wager Stanford Short Online Course 'Machine Learning and Economics'
+https://www.youtube.com/watch?v=Z0ZcsxI-HTs&list=PLxq_lXOUlvQAoWZEqhRqHNezS30lI49G-
+In particular lectures on Average Treatment and Conditional Average Treatment Effects
+
+Susan Athey and Guido Imbens' lectures from the 2018 AEA Continuing Education 'Machine Learning and Economics'
+https://www.aeaweb.org/conference/cont-ed/2018-webcasts
+See Part 3 and Part 4 - Introduction and overview, Potential outcomes framework, ATE, ATT
+See Part 5 and Part 6 - Heterogeneous Treatment Effects
+
+Victor Chernozhukov's presentation on Double Machine Learning for Causal and Treatment Effects 
+https://www.youtube.com/watch?v=Z0ZcsxI-HTs&list=PLxq_lXOUlvQAoWZEqhRqHNezS30lI49G- 
+
+
+
